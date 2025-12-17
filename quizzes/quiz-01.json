@@ -1,0 +1,26 @@
+{
+  "questions": [
+    {
+      "question": "What is the primary goal of a GTO poker strategy?",
+      "options": [
+        "To maximize winnings on every hand.",
+        "To be unexploitable by opponents.",
+        "To always bluff at the right frequency.",
+        "To play as aggressively as possible."
+      ],
+      "correctAnswer": 1,
+      "explanation": "GTO is a defensive strategy focused on playing in a way that opponents cannot take advantage of you, making you unexploitable."
+    },
+    {
+      "question": "Which concept is NOT a core part of GTO?",
+      "options": [
+        "Ranges",
+        "Balance",
+        "Frequencies",
+        "Reading your opponent's soul"
+      ],
+      "correctAnswer": 3,
+      "explanation": "While understanding opponents is key to exploitative play, pure GTO focuses on mathematical principles like ranges, balance, and frequencies, not subjective reads."
+    }
+  ]
+}

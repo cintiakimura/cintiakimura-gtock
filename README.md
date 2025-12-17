@@ -1,11 +1,23 @@
-<div align="center">
+# GTO Poker Mastery
 
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+Welcome to GTO Poker Mastery, a comprehensive web application designed to help you master Game Theory Optimal poker strategies.
 
-  <h1>Built with AI Studio</h2>
+This course features 15 interactive modules, quizzes, and progress tracking to guide you from fundamental concepts to advanced applications.
 
-  <p>The fastest path from prompt to production with Gemini.</p>
+## Table of Contents
 
-  <a href="https://aistudio.google.com/apps">Start building</a>
-
-</div>
+*   Module 01: Introduction to GTO
+*   Module 02: Core Poker Math
+*   Module 03: Preflop Fundamentals
+*   Module 04: The Flop in Single-Raised Pots
+*   Module 05: Turn and River Play (SRP)
+*   Module 06: 3-Bet and 4-Bet Pots
+*   Module 07: Multiway Pots
+*   Module 08: Introduction to Solvers
+*   Module 09: Preflop Solutions Deep Dive
+*   Module 10: Postflop Solver Practice
+*   Module 11: Exploiting Deviations
+*   Module 12: Tournament GTO Adjustments
+*   Module 13: Advanced GTO Strategies
+*   Module 14: Mental Game & Study Routine
+*   Module 15: Capstone: Integrating Your Skills

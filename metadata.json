@@ -1,0 +1,7 @@
+{
+  "name": "GTO Poker Mastery",
+  "description": "A comprehensive web application to master Game Theory Optimal poker strategies, featuring interactive modules, quizzes, and progress tracking.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
