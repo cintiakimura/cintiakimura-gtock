@@ -1,4 +1,3 @@
-
 # Module 13: Advanced Strategies
 
 ## Learning Objectives
@@ -98,4 +97,4 @@ Solvers mix because opponent is **indifferent**:
 3. Why mix strategies?  
    **Answer: Make opponent indifferent (unexploitable)**
 
-Elite level reached! Next: Mental Game & Study Routine.
+Elite level reached! Next: Mental Game & Study Routine. Save as `13-advanced-strategies.md`.

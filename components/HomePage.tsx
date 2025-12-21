@@ -2,7 +2,7 @@
 import React from 'react';
 import { ProgressBar } from './ProgressBar';
 import { CheckIcon } from './Icons';
-import { Thinking } from './Thinking';
+import { Logo } from './Logo';
 
 interface HomePageProps {
   onStartLearning: () => void;
@@ -47,7 +47,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onStartLearning, progress, o
     <div className="flex flex-col items-center justify-center h-full text-center">
       <div className="max-w-2xl">
         <div className="w-40 h-40 mx-auto mb-8">
-            <Thinking />
+            <Logo className="w-full h-full rounded-full shadow-glow" />
         </div>
         <h1 className="text-5xl md:text-6xl font-black text-lumen-primary mb-4" style={{textShadow: '0 0 15px rgba(0, 198, 0, 0.4)'}}>
           GTO Poker Mastery

@@ -18,10 +18,11 @@ interface ModuleViewProps {
   isLastModule: boolean;
   note: string;
   onUpdateNote: (moduleId: number, text: string) => void;
+  language: string;
 }
 
 export const ModuleView: React.FC<ModuleViewProps> = ({ 
-  module, onStartQuiz, onStartOralTest, isCompleted, onPreviousModule, onNextModule, isFirstModule, isLastModule, note, onUpdateNote 
+  module, onStartQuiz, onStartOralTest, isCompleted, onPreviousModule, onNextModule, isFirstModule, isLastModule, note, onUpdateNote, language
 }) => {
   const [showVideoUrl, setShowVideoUrl] = useState<string | null>(null);
   
@@ -41,7 +42,7 @@ export const ModuleView: React.FC<ModuleViewProps> = ({
         </article>
 
         {module.assets && (Object.keys(module.assets).length > 0) && (
-          <ModuleAssets assets={module.assets} onPlayVideo={setShowVideoUrl} />
+          <ModuleAssets assets={module.assets} onPlayVideo={setShowVideoUrl} language={language} />
         )}
 
         <Notes 

@@ -1,10 +1,10 @@
 
 
 export interface ModuleAssets {
-  videoUrl?: string;
-  podcastUrl?: string;
-  slidesUrl?: string;
-  infographicUrl?: string;
+  videoUrl?: { [key: string]: string };
+  podcastUrl?: { [key: string]: string };
+  slidesUrl?: { [key: string]: string };
+  infographicUrl?: { [key: string]: string };
 }
 
 export interface Module {

@@ -1,4 +1,3 @@
-
 # Module 14: Mental Game & Study Routine
 
 ## Learning Objectives
@@ -83,4 +82,4 @@ Your technical skills are solid now—mental game turns knowledge into wins.
 3. Hand Review Priority?  
    **Answer: Big pots + EV loss >5bb**
 
-Final stretch! Next: Module 15 Capstone.
+Final stretch! Next: Module 15 Capstone. Save as `14-mental-game-study-routine.md`.

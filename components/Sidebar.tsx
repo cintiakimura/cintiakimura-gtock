@@ -2,6 +2,7 @@
 import React from 'react';
 import type { Module } from '../types';
 import { CheckIcon, HomeIcon } from './Icons';
+import { Logo } from './Logo';
 
 interface SidebarProps {
   modules: Module[];
@@ -9,12 +10,15 @@ interface SidebarProps {
   activeModuleId: number | null;
   onSelectModule: (moduleId: number) => void;
   onGoHome: () => void;
+  language: string;
+  onLanguageChange: (lang: string) => void;
 }
 
-export const Sidebar: React.FC<SidebarProps> = ({ modules, completedModules, activeModuleId, onSelectModule, onGoHome }) => {
+export const Sidebar: React.FC<SidebarProps> = ({ modules, completedModules, activeModuleId, onSelectModule, onGoHome, language, onLanguageChange }) => {
   return (
     <div className="h-full flex flex-col text-text-primary">
-      <div className="p-4 border-b border-white/5">
+      <div className="p-4 border-b border-white/5 flex flex-col items-center gap-2">
+        <Logo className="w-20 h-20 rounded-full" />
         <h2 className="text-2xl font-black text-center text-lumen-primary uppercase tracking-widest">GTO Mastery</h2>
       </div>
       <nav className="flex-1 overflow-y-auto">
@@ -53,6 +57,25 @@ export const Sidebar: React.FC<SidebarProps> = ({ modules, completedModules, act
           })}
         </ul>
       </nav>
+
+      <div className="p-4 mt-auto border-t border-white/5">
+        <div className="flex justify-center gap-2">
+            <button
+              onClick={() => onLanguageChange('en')}
+              className={`px-4 py-1 rounded-full text-sm font-bold transition-colors ${language === 'en' ? 'bg-lumen-primary text-black' : 'bg-white/5 text-text-muted hover:bg-white/10'}`}
+              aria-label="Switch to English"
+            >
+              EN
+            </button>
+            <button
+              onClick={() => onLanguageChange('fr')}
+              className={`px-4 py-1 rounded-full text-sm font-bold transition-colors ${language === 'fr' ? 'bg-lumen-primary text-black' : 'bg-white/5 text-text-muted hover:bg-white/10'}`}
+              aria-label="Switch to French"
+            >
+              FR
+            </button>
+        </div>
+    </div>
     </div>
   );
 };

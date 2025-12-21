@@ -1,4 +1,3 @@
-
 # Module 12: Game Theory in Tournaments
 
 ## Learning Objectives
@@ -90,4 +89,4 @@ Short stacks (≤15bb): Push/fold only.
 3. FGS vs ICM?  
    **Answer: FGS simulates full play (more accurate)**
 
-FT mastery unlocked! Next: Advanced Strategies.
+FT mastery unlocked! Next: Advanced Strategies. Save as `12-tournament-gto.md`.

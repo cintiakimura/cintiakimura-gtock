@@ -1,8 +1,7 @@
-
 # Module 1: Introduction to GTO vs Exploitative Play
 
 ## Learning Objectives
-By the end of of this module, you will:
+By the end of this module, you will:
 - Understand what **Game Theory Optimal (GTO)** play means in poker and why it's a foundational concept.
 - Differentiate between GTO and exploitative strategies.
 - Grasp the core ideas of minimax, Nash Equilibrium, and unexploitable play.

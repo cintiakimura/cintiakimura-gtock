@@ -1,4 +1,3 @@
-
 # Module 15: Putting It All Together (Capstone & Integration)
 
 ## Learning Objectives
@@ -90,12 +89,12 @@ Congratulations! You've completed the core course. This capstone ties it all tog
 - Pio Trainer<grok-card data-id="41d415" data-type="citation_card"></grok-card>
 - Join r/poker or Discord communities.
 
-🎉 **Course Complete!** Share your final project results – let's celebrate your progress.
+🎉 **Course Complete!** Share your final project results – let's celebrate your progress. Save as `15-capstone-integration.md`.
 
 ---
 
 ## Full Course README.md (Bonus for GitHub)
-`
+```markdown
 # Poker GTO Course
 
 15-module comprehensive GTO course. Clone → MkDocs/Jekyll build → Your site!
@@ -106,4 +105,4 @@ Congratulations! You've completed the core course. This capstone ties it all tog
 
 ## Build
 mkdocs serve
-`
+

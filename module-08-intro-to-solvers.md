@@ -1,4 +1,3 @@
-
 # Module 8: Introduction to Solvers (PioSolver, GTO+, Simple Postflop, etc.)
 
 ## Learning Objectives
@@ -95,4 +94,4 @@ Solvers use **Counterfactual Regret Minimization (CFR)**: Iterative algorithm wh
 3. Best beginner solver?  
    **Answer: GTO+ (cheap, fast) or GTO Wizard free.**
 
-Perfect! Phase 3 begins. Next: Building Preflop Solutions.
+Perfect! Phase 3 begins. Next: Building Preflop Solutions. Save as `08-intro-to-solvers.md`.

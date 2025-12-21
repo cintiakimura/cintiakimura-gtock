@@ -8,6 +8,7 @@ import { OralTestView } from './components/OralTestView';
 import { MenuIcon, XIcon } from './components/Icons';
 import { useLocalStorage } from './hooks/useLocalStorage';
 import type { Module, Quiz } from './types';
+import { RangeHelper } from './components/RangeHelper';
 
 const MODULES: Module[] = [
   { 
@@ -16,8 +17,11 @@ const MODULES: Module[] = [
     path: 'modules/module-01-introduction.md', 
     quizPath: 'quizzes/quiz-01.json',
     assets: {
-      videoUrl: 'https://www.youtube.com/embed/u3dfPBFK_kY',
-      slidesUrl: '#',
+      videoUrl: { 
+        en: 'https://www.youtube.com/embed/u3dfPBFK_kY',
+        fr: 'https://www.youtube.com/embed/videoseries?list=PL_t55CC_B2F2a-A42b2V_B-O5z-iW8j_o' // Placeholder
+      },
+      slidesUrl: { en: '#', fr: '#' },
     } 
   },
   { 
@@ -26,9 +30,15 @@ const MODULES: Module[] = [
     path: 'modules/module-02-core-math.md', 
     quizPath: 'quizzes/quiz-02.json',
     assets: {
-      videoUrl: 'https://www.youtube.com/embed/f_pT9oH-1yA',
-      podcastUrl: '#',
-      infographicUrl: 'https://picsum.photos/800/1200?random=2',
+      videoUrl: { 
+        en: 'https://www.youtube.com/embed/f_pT9oH-1yA',
+        fr: 'https://www.youtube.com/embed/videoseries?list=PL_t55CC_B2F2a-A42b2V_B-O5z-iW8j_o' // Placeholder
+      },
+      podcastUrl: { en: '#', fr: '#' },
+      infographicUrl: {
+        en: 'https://picsum.photos/800/1200?random=2',
+        fr: 'https://picsum.photos/800/1200?random=2&grayscale' // Placeholder
+      },
     }
   },
   { id: 3, title: "Preflop Fundamentals", path: 'modules/module-03-preflop-fundamentals.md', quizPath: 'quizzes/quiz-03.json' },
@@ -55,6 +65,7 @@ const App: React.FC = () => {
   const [activeQuiz, setActiveQuiz] = useState<Quiz | null>(null);
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [error, setError] = useState<string | null>(null);
+  const [language, setLanguage] = useState('en');
   
   const [completedModules, setCompletedModules, resetCompletedModules] = useLocalStorage<number[]>('completedModules', []);
   const [notes, setNotes] = useLocalStorage<{[key: number]: string}>('pokerNotes', {});
@@ -189,6 +200,7 @@ const App: React.FC = () => {
                 isLastModule={currentIndex === MODULES.length - 1}
                 note={notes[activeModule.id] || ''}
                 onUpdateNote={handleUpdateNote}
+                language={language}
             />;
         }
         return null;
@@ -206,6 +218,7 @@ const App: React.FC = () => {
         if (activeModule && activeModuleContent) {
             return <OralTestView
                 moduleTitle={activeModule.title}
+                // FIX: Pass the `activeModuleContent` state variable instead of the undefined `moduleContent`.
                 moduleContent={activeModuleContent}
                 onTestComplete={handleTestComplete}
             />
@@ -225,6 +238,8 @@ const App: React.FC = () => {
           activeModuleId={activeModule?.id || null}
           onSelectModule={handleSelectModule}
           onGoHome={handleGoHome}
+          language={language}
+          onLanguageChange={setLanguage}
         />
       </div>
 
@@ -240,6 +255,7 @@ const App: React.FC = () => {
           {renderContent()}
         </main>
       </div>
+      <RangeHelper />
     </div>
   );
 };

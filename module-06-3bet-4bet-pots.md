@@ -1,4 +1,3 @@
-
 # Module 6: 3-Bet and 4-Bet Pots
 
 ## Learning Objectives
@@ -85,4 +84,4 @@ By the end of this module, you will:
 3. 4-bet bluffs: Best with?  
    **Answer: Ax blockers (A5s)**
 
-Solid! Next: Multiway Pots.
+Solid! Next: Multiway Pots. Save as `06-3bet-4bet-pots.md`.

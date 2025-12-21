@@ -1,4 +1,3 @@
-
 # Module 7: Multiway Pots
 
 ## Learning Objectives
@@ -80,4 +79,4 @@ Multiway pots (3+ players) are tougher: lower equity realization, capped ranges,
 3. Defender strategy multiway OOP?  
    **Answer: Check-raise more with strong hands**
 
-Well done! Multiway is tough but crucial. Next: Tools & Solvers.
+Well done! Multiway is tough but crucial. Next: Tools & Solvers. Save as `07-multiway-pots.md`.

@@ -1,4 +1,3 @@
-
 # Module 3: Preflop Fundamentals
 
 ## Learning Objectives
@@ -106,4 +105,4 @@ Practice: Quiz yourself on 10 hands per position daily.
 3. At 30bb, adjust RFI how?  
    **Answer: Wider, more shoves IP**
 
-Great progress! Next: Flop Play in SRP.
+Great progress! Next: Flop Play in SRP. Save as `03-preflop-fundamentals.md`.

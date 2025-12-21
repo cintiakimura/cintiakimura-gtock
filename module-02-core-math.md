@@ -1,4 +1,3 @@
-
 # Module 2: Core Poker Math & Concepts
 
 ## Learning Objectives

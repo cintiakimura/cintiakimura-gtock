@@ -43,39 +43,50 @@ const AssetCard: React.FC<AssetCardProps> = ({ icon, title, onClick, href }) => 
 interface ModuleAssetsProps {
   assets: ModuleAssetsType;
   onPlayVideo: (url: string) => void;
+  language: string;
 }
 
-export const ModuleAssets: React.FC<ModuleAssetsProps> = ({ assets, onPlayVideo }) => {
+export const ModuleAssets: React.FC<ModuleAssetsProps> = ({ assets, onPlayVideo, language }) => {
+  const getUrl = (asset?: { [key: string]: string }) => {
+    if (!asset) return undefined;
+    return asset[language] || asset['en'];
+  }
+
+  const videoUrl = getUrl(assets.videoUrl);
+  const podcastUrl = getUrl(assets.podcastUrl);
+  const slidesUrl = getUrl(assets.slidesUrl);
+  const infographicUrl = getUrl(assets.infographicUrl);
+
   return (
     <div className="my-12">
       <h3 className="text-2xl font-bold mb-4 text-lumen-secondary">Module Resources</h3>
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
-        {assets.videoUrl && (
+        {videoUrl && (
             <AssetCard 
                 icon={<VideoIcon />}
                 title="Watch Video"
-                onClick={() => onPlayVideo(assets.videoUrl!)}
+                onClick={() => onPlayVideo(videoUrl)}
             />
         )}
-        {assets.podcastUrl && (
+        {podcastUrl && (
             <AssetCard 
                 icon={<PodcastIcon />}
                 title="Listen Podcast"
-                href={assets.podcastUrl}
+                href={podcastUrl}
             />
         )}
-        {assets.slidesUrl && (
+        {slidesUrl && (
             <AssetCard 
                 icon={<SlidesIcon />}
                 title="View Slides"
-                href={assets.slidesUrl}
+                href={slidesUrl}
             />
         )}
-        {assets.infographicUrl && (
+        {infographicUrl && (
             <AssetCard 
                 icon={<InfographicIcon />}
                 title="See Infographic"
-                href={assets.infographicUrl}
+                href={infographicUrl}
             />
         )}
       </div>
